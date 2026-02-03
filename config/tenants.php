@@ -17,7 +17,7 @@ return [
     |--------------------------------------------------------------------------
     | When true, users can belong to multiple organizations.
     */
-    'multi_org' => true,
+    'multi_org' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -25,7 +25,7 @@ return [
     |--------------------------------------------------------------------------
     | When true, a personal organization is auto-created on user registration.
     */
-    'personal_org' => true,
+    'personal_org' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -67,7 +67,7 @@ return [
     |--------------------------------------------------------------------------
     */
     'admin' => [
-        'enabled' => true,
+        'enabled' => false,
         'prefix' => 'admin/organizations',
         'middleware' => ['web', 'auth', 'role:super-admin,admin'],
     ],

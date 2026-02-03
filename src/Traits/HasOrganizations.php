@@ -83,7 +83,7 @@ trait HasOrganizations
         if (config('tenants.personal_org', true)) {
             static::created(function ($user): void {
                 app(\LaravelPlus\Tenants\Services\OrganizationService::class)
-                    ->createPersonalOrganization($user->id, $user->name);
+                    ->createPersonalOrganization($user->id, $user->name ?? $user->email);
             });
         }
     }
